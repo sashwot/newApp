@@ -17,7 +17,7 @@ export default function App() {
     }}>
 
     
-    <TouchableWithoutFeedback onPress={()=>Speech.speak({bodyText}) } >
+    <TouchableWithoutFeedback onPress={()=>Speech.speak('I want to go to washroom!') } >
       
       <View
           style={{
