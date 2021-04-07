@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableWithoutFeedback, Button, TextInput } f
 import * as Speech from 'expo-speech'
 
 
-const bodyText = 'I want to go to washroom!'
+const washroomCommand = 'I want to go to washroom!';
 
 export default function App() {
   return (
@@ -17,7 +17,7 @@ export default function App() {
     }}>
 
     
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('I want to go to washroom!') } >
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(washroomCommand)} >
       
       <View
           style={{
@@ -29,7 +29,6 @@ export default function App() {
           }}
           
       />
-      <Text>{bodyText}</Text>
       
     </TouchableWithoutFeedback>
     <TouchableWithoutFeedback onPress={()=>Speech.speak('I am hungry!')}>
