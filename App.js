@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
 
   bottonText: {
-    color: '#ffffff',
+    color: '#000000',
     fontSize: 24.0  
   }
 });
