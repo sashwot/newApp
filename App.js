@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   
   textstyle: {
     color:'#ffffff',
-    fontSize: 24.0
+    fontSize: 32.0
   },
   
   buttonContainer: {
