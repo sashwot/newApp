@@ -4,135 +4,112 @@ import { StyleSheet, Text, View, TouchableWithoutFeedback, Button, TextInput } f
 import * as Speech from 'expo-speech'
 
 
-const washroomCommand = 'I want to go to washroom!';
+var commands = ['I want to go to washroom!', 'I am hungry!', 'I need your help!', 'I need a power nap!', 'I want to talk with you!', 'I want to be alone!', 
+'Have a great day!', 'Goodbye!'];
+
 
 export default function App() {
   return (
-    <View style={{
-      backgroundColor:"#4B0082",
-      flex:0.3,
-      flexDirection:"row",
-      justifyContent:"center",
-      alignItems:"center",
-    }}>
+   <View style={styles.container}>
+    <View style={styles.topbar}>
+    <Text style={styles.textstyle}>Text-To-Speech App</Text>
+   </View>
+   
+    
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[0])} > 
+      <View style={styles.button}>
+       <Text>{commands[0]}</Text> 
+      </View> 
+    </TouchableWithoutFeedback>
 
+
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[1])} >
+      <View style={styles.button}>
+       <Text>{commands[1]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
     
-    <TouchableWithoutFeedback onPress={()=>Speech.speak(washroomCommand)} >
-      
-      <View
-          style={{
-            backgroundColor:'red',
-            width:90,
-            height:100,
-            top: 165,
-            left:220,
-          }}
-          
-      />
-      
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('I am hungry!')}>
-      <View 
-          style={{
-            backgroundColor:'blue',
-            width:90,
-            height:120,
-            top: 165,
-            right:-250,
-          }}
-      />
-    </TouchableWithoutFeedback> 
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('I need your help!')}>
-      <View 
-          style={{
-            backgroundColor:'black',
-            width:90,
-            height:120,
-            top: 165,
-            left:300,
-          }}
-      />
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('I need a power nap!')}>
-      <View 
-          style={{
-            backgroundColor:'purple',
-            width:90,
-            height:120,
-            top: 300,
-            right:49,
-          }}
-      />
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=> Speech.speak('I want to talk with my family member!')}>
-      <View 
-        style={{
-          backgroundColor:'#dc143c',
-          width:90,
-          height:120,
-          top:300,
-          right:20,
-        }}
-      />
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=> Speech.speak('I want to talk with you!')}>
-      <View 
-        style={{
-          backgroundColor:'yellow',
-          width:90,
-          height:120,
-          top:300,
-          right: -30,
-        }}
-      />
-    </TouchableWithoutFeedback> 
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('Please leave me alone!')}>
-      <View 
-        style={{
-          backgroundColor:'orange',
-          width:90,
-          height:120,
-          top:450,
-          right:60,
-        }}
-      />
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('Have a great day!')}>
-      <View 
-        style={{
-          backgroundColor:'green',
-          width:90,
-          height:120,
-          top:450,
-          right:410,
-        }}
-      />
-    </TouchableWithoutFeedback>
-    <TouchableWithoutFeedback onPress={()=>Speech.speak('See you man!')}>
-      <View 
-        style={{
-          backgroundColor:'pink',
-          width:90,
-          height:120,
-          top:450,
-          right:380,
-        }}
-      />
-    </TouchableWithoutFeedback>
-      <StatusBar style="auto" />
     
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[2])} >
+      <View style={styles.button}>
+       <Text>{commands[2]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[3])} >
+      <View style={styles.button}>
+       <Text>{commands[3]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[4])} >
+      <View style={styles.button}>
+       <Text>{commands[4]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[5])} >
+      <View style={styles.button}>
+       <Text>{commands[5]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[6])} >
+      <View style={styles.button}>
+       <Text>{commands[6]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[7])} >
+      <View style={styles.button}>
+       <Text>{commands[7]}</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+
+    <TouchableWithoutFeedback onPress={()=>Speech.speak('new command')} >
+      <View style={styles.button}>
+       <Text>+</Text> 
+      </View>
+    </TouchableWithoutFeedback>
+    
+    
+
+    <StatusBar style="auto" />
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex:1,
+    flexDirection:"column",
   },
+  
+  topbar: {
+    flex: .8,
+    backgroundColor:"#4B0082",
+    justifyContent:'center',
+    alignItems: 'center',
+    flexDirection:'row'
+  },
+  
+  textstyle: {
+    color:'#ffffff',
+    fontSize: 24.0
+  },
+  
+  buttonContainer: {
+   flex: 1
+  },
+  
+  button: {
+    borderRadius: 10,
+    backgroundColor:'#FFFF00',
+    justifyContent:"center",
+    alignItems:'center',
+    margin: 5,
+    flex: .5
+  }
 });
-
-
-
