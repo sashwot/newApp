@@ -19,60 +19,59 @@ export default function App() {
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[0])} > 
       <View style={styles.button}>
-       <Text>{commands[0]}</Text> 
+       <Text style={styles.bottonText}>{commands[0]}</Text> 
       </View> 
     </TouchableWithoutFeedback>
 
 
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[1])} >
       <View style={styles.button}>
-       <Text>{commands[1]}</Text> 
+       <Text style={styles.bottonText}>{commands[1]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[2])} >
       <View style={styles.button}>
-       <Text>{commands[2]}</Text> 
+       <Text style={styles.bottonText}>{commands[2]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[3])} >
       <View style={styles.button}>
-       <Text>{commands[3]}</Text> 
+       <Text style={styles.bottonText}>{commands[3]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[4])} >
       <View style={styles.button}>
-       <Text>{commands[4]}</Text> 
+       <Text style={styles.bottonText}>{commands[4]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[5])} >
       <View style={styles.button}>
-       <Text>{commands[5]}</Text> 
+       <Text style={styles.bottonText}>{commands[5]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[6])} >
       <View style={styles.button}>
-       <Text>{commands[6]}</Text> 
+       <Text style={styles.bottonText}>{commands[6]}</Text> 
       </View>
     </TouchableWithoutFeedback>
     
     <TouchableWithoutFeedback onPress={()=>Speech.speak(commands[7])} >
       <View style={styles.button}>
-       <Text>{commands[7]}</Text> 
+       <Text style={styles.bottonText}>{commands[7]}</Text> 
       </View>
     </TouchableWithoutFeedback>
 
     <TouchableWithoutFeedback onPress={()=>Speech.speak('new command')} >
       <View style={styles.button}>
-       <Text>+</Text> 
+       <Text style={styles.bottonText}>+</Text> 
       </View>
     </TouchableWithoutFeedback>
-    
     
 
     <StatusBar style="auto" />
@@ -111,5 +110,10 @@ const styles = StyleSheet.create({
     alignItems:'center',
     margin: 5,
     flex: .5
+  },
+
+  bottonText: {
+    color: '#ffffff',
+    fontSize: 24.0  
   }
 });
