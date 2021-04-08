@@ -12,7 +12,7 @@ export default function App() {
   return (
    <View style={styles.container}>
     <View style={styles.topbar}>
-    <Text style={styles.textstyle}>Text-To-Speech App</Text>
+    <Text style={styles.textstyle}>Easy text</Text>
    </View>
    
     
